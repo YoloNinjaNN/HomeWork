@@ -9,27 +9,28 @@
 
 <body>
 <header>
-    <div class="navigation">
         <nav class="navig">
-        <span><a href="#">Home</a></span>
-        <span><a href="#About_me">About me</a></span>
-        <span><a href="#Skills"> Skills</a></span>
-        <span><a href="#Portfolio"> Portfolio</a></span>
-        <span><a href="#Contacts"> Contacts</a></span>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#About_me">About me</a></li>
+        <li><a href="#Skills"> Skills</a></li>
+        <li><a href="#Portfolio"> Portfolio</a></li>
+        <li><a href="#Contacts"> Contacts</a></li>
+        </ul>
         </nav>
-    </div>
 </header>
 
 <main>
+    <section id="Home">
     <div class="container">
-        <div id="#" class="photo">
+        <div class="photo">
         
         <h1>Denis Novik</h1>
         <img src="image/denis_novik.jpg" alt="Denis_Novik">
         </div>
 
-        <div class="about_me">
-            <section id="About_me">
+        <div id="About_me" class="about_me">
+            
                 <h2>About me</h2>
                 <p>Hi, I'm Denis – UX/UI designer from Minsk.</p>
                 <p>I'm interested in design and everything connected with it.</p>
@@ -37,17 +38,20 @@
                 <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy</p>
                 <br><br>
                 <p>Ready to implement excellent profects with wonderful people.</p>
-            </section>
+            
         </div>
+    </div>
+    </section>
 
-
-        <div id="Skills" class="skills">
-        
+    <section id="Skills">
+    <div class="container">
+        <div class="skills">
         <h2>Skills</h2>
         <p>I work in such programs as</p>
         </div>
     
         <div class="programs">
+            
             <img src="image/photoshop.svg" alt="Adobe Photoshop">
             <p>Adobe Photoshop</p>
             <div class="stars">
@@ -58,7 +62,7 @@
                 <span> <img src="image/star.svg" alt="star"></span>
             </div>
         </div>
-
+ 
         <div class="programs">
             <img src="image/illustrator.svg" alt="Adobe Illustrator">
             <p>Adobe Illustrator</p>
@@ -71,7 +75,9 @@
             </div>
         </div>
 
+  
         <div class="programs">
+            
             <img src="image/aftereffects.svg" alt="Adobe After Effects">
             <p>Adobe After Effects</p>
             <div class="stars">
@@ -80,11 +86,12 @@
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
-
             </div>
         </div>
 
+
         <div class="programs">
+            
             <img src="image/figma.svg" alt="Figma">
             <p>Figma</p>
             <div class="stars">
@@ -93,14 +100,16 @@
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
+            
             </div>
         </div>
-    
+    </div>
+    </section>
 
 
-        <section id="Portfolio" class="portfolio">
+    <section id="Portfolio">
+    <div class="container">
         <h2>Portfolio</h2>
-        </section>
         <div class="portfolio">
         <img src="image/fashion_web.jpg" alt="Fashion_store">
         <br>
@@ -114,9 +123,15 @@
         <br>
         <a href="#">Braun Landing Page - Concept</a>
         </div> 
+    </div>
+    </section>
+</main>
 
 
-        <div id="Contacts" class="contracts">
+<footer>
+    <section class="contracts">
+    <div class="container">
+        <div id="Contacts" >
         <hgroup>
         <h2>Contacts</h2>
         <p>Want to know more or just chat?<br>You are welcone!</p>
@@ -136,13 +151,13 @@
             rel="nofollow, noreferrer">
             <img src="image/dribble.svg" alt="dribble"></a></span>
         </div>
-    </div>
-</main>
-
-    <footer>
+    
             <p>Like me on <br>
             Linkedin, Instagram, Behance,<br>
-            Dribble</p>   
-    </footer>
+            Dribble</p> 
+    </div>
+    </section>  
+</footer>
+    
 </body>
 </html>
