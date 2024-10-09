@@ -9,7 +9,6 @@
 
 <body>
 <header>
-    <section>
         <div class="container">
         <nav>
             <ul>
@@ -21,38 +20,35 @@
             </ul>
         </nav>
         </div>
-    </section>
 </header>
 
 <main>
-    <section id="Home">
     <div class="container">
         <div class="photo">
         
         <h1>Denis Novik</h1>
         <img src="image/denis_novik.jpg" alt="Denis_Novik">
         </div>
-
-        <div id="About_me" class="about_me">
-            
-                <h2>About me</h2>
-                <p>Hi, I'm Denis – UX/UI designer from Minsk.</p>
-                <p>I'm interested in design and everything connected with it.</p>
-                <br><br>
-                <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy</p>
-                <br><br>
-                <p>Ready to implement excellent profects with wonderful people.</p>
-            
-        </div>
     </div>
-    </section>
-
-    <section id="Skills">
+    <section id="About_me" class="about_me">
     <div class="container">
-        <div class="skills">
+          
+                <h2>About me</h2>
+                <p>Hi, I'm Denis – UX/UI designer from Minsk.<br>
+                I'm interested in design and everything connected with it.</p>
+                <br>
+                <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy</p>
+                <br>
+                <p>Ready to implement excellent profects with wonderful people.</p>       
+    </div>
+    </section> 
+
+    <section id="Skills" class="skills">
+    <div class="container">
+        <hgroup>
         <h2>Skills</h2>
         <p>I work in such programs as</p>
-        </div>
+        </hgroup>
     
         <div class="programs">
             
@@ -61,9 +57,9 @@
             <div class="stars">
                 <span> <img src="image/star.svg" alt="star"> </span>
                 <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
             </div>
         </div>
  
@@ -74,8 +70,8 @@
                 <span> <img src="image/star.svg" alt="star"> </span>
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
             </div>
         </div>
 
@@ -89,7 +85,7 @@
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
                 <span> <img src="image/star.svg" alt="star"></span>
-                <span> <img src="image/star.svg" alt="star"></span>
+                <span> <img src="image/star.svg" alt="star" class="gray"></span>
             </div>
         </div>
 
@@ -131,7 +127,6 @@
     </section>
 </main>
 
-
 <footer>
     <section class="contracts">
     <div class="container">
@@ -140,7 +135,9 @@
         <h2>Contacts</h2>
         <p>Want to know more or just chat?<br>You are welcone!</p>
         </hgroup>
+        <div class="button">
         <button>Send message</button>
+        </div>
         <br>
         <span><a href="https://ua.linkedin.com/" target="_blank"
             rel="nofollow, noreferrer">
@@ -156,9 +153,11 @@
             <img src="image/dribble.svg" alt="dribble"></a></span>
         </div>
     
-            <p>Like me on <br>
+        <div>
+            Like me on <br>
             Linkedin, Instagram, Behance,<br>
-            Dribble</p> 
+            Dribble
+        </div> 
     </div>
     </section>  
 </footer>
