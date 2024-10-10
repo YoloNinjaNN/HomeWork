@@ -15,14 +15,23 @@
     </style>
 </head>
 <body>
-<a href="form.html">Перехід до розширеної реєстрації</a>
+    <a href="index.html">Перехід до швидкої реєстрації</a>
 <fieldset>
-<legend>Швидка реєстрація</legend>
+<legend>Розширена реєстрація</legend>
 <form action="#" method="post" enctype="multipart/form-data" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
 
 <div class="form-row">
     <label for="name">Повне ім'я:</label>
     <input type="text" name="name" id="name">
+</div>
+
+<div class="form-row">
+    <label for="birthDate">Дата народження:</label>
+    <input type="date" id="birthDate" name="birthDate">
+</div>
+<div class="form-row">
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX-XX-XX">
 </div>
 
 <div class="form-row">
@@ -41,6 +50,11 @@
 </div>
 
 <div class="form-row">
+    <label for="favoriteColor">Улюблений колір:</label>
+    <input type="color" id="favoriteColor" name="favoriteColor">
+</div>
+
+<div class="form-row">
     <label>Стать:</label>
     <input type="radio" name="gender" value="male"> Чоловіча
     <input type="radio" name="gender" value="female">Жіноча
@@ -52,11 +66,12 @@
 </div>
 
 <div class="form-row">
-    <label for="course"> Курс:</label>
-    <select id="course" name="course">
-        <option value="bront-end">Front-End</option>
-        <option value="back_end">Back-End</option>
-        <option value="qa_manual">Qa_manual</option>
+    <label for="course">Курс:</label>
+    <select name="course" id="course">
+        <option value="frontend">Front-End</option>
+        <option value="backend">Back-End</option>
+        <option value="projectManagement">Project-Management</option>
+        <option value="qa">QA-Manual</option>
     </select>
 </div>
 
@@ -69,7 +84,6 @@
 </div>
 
 <div class="form-row"><button type="submit">Зареєструватись</button></div>
-
 </form>
 </fieldset>
 </body>
