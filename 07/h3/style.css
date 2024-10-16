@@ -14,19 +14,20 @@
     .shopping-list {
         background-color: #fff; /* Цвет фона списка */
         padding: 40px;
-        width: min(100%, 800px);
-        margin-inline: auto;
+        width: 874px;
+       
        
       }
     .color {
     background-color: #3B3F45;
+    margin: -18px;
     }
 
     .container {
         
         margin-inline: auto;
-        padding: 20px; 
-        width: min(90%, 800px);/*//*/
+        padding: 22px; 
+
         
     }
 
@@ -48,16 +49,18 @@
         align-items: center;
         height: 5;
     }
+    .forms{
+        margin: 126px;
+    }
     
     label {
         display: flex;
         align-items: center;
-        padding: 10px;
         cursor: pointer;
         border: none;
         background: #88839E;
         position: relative;
-        height: 45px;
+        height: 46px;
         
       }
     
@@ -96,11 +99,13 @@
     label:hover::before {
         top: 0;
     }
+    label:hover::after {
+        bottom: 0;
+    }
 
     footer {
         display: flex;
         align-items: center;
-        padding: 45px;
         cursor: pointer;
         border: none;
         position: relative;
@@ -113,6 +118,4 @@
         background-color: #4A4F56;
     }
 
-    label:hover::after {
-        bottom: 0;
-    }
+   
