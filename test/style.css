@@ -11,14 +11,14 @@ body {
 .container {
     margin: 220px;
     margin-left: 600px;
-    width: 800px;
+    width: 793px;
     height: 507px;
     background-color: #3B3F45;;
 }
 /*/* header/*/
 
 .shopping-list {
-    width: 800px;
+    width: 793px;
     height: 82px;
     flex-shrink: 0;
     background-color: #4a4f56;
