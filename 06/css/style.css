@@ -14,11 +14,12 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 1.125rem;
     color: var(--text-color);
-
 }
+
 img {
     vertical-align: top;
 }
+
 .container {
     width: min(90%, 970px);
     margin-inline: auto;
@@ -32,6 +33,7 @@ header .container {
 ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
 }
@@ -56,19 +58,19 @@ a {
 .navigation ul li a:hover {
     color: var(--text-color);
 }
-.first_block{
+
+.first_block {
     margin-top: 12px;
 }
+
 .photo {
     width: 100%;
     object-fit: contain;
 }
 
-
 h1 {
     font-size: 3rem;
     margin-bottom: 45px;
-
 }
 
 .about-me h2 {
@@ -78,45 +80,44 @@ h1 {
     margin-top: 100px;
 }
 
-.text{
+.text {
     text-align: center;
-
 }
-.text p{
+
+.text p {
     margin-top: 43px;
     font-size: 1.125rem;
     height: 37px;
 }
-/* header*/
 
+/* header */
 
-.skills-container{
+.skills-container {
     margin-top: 50px;
     margin-bottom: 50px;
     width: 970px;
     height: 564px;
-    flex-shrink: 0;
 }
 
-.skills h2{
+.skills h2 {
     margin-top: 210px;
     font-size: 2.125rem;
     font-weight: 700;
     text-align: center;
 }
-.skills p{
+
+.skills p {
     margin-top: 20px;
     font-size: 1.125rem;
     font-weight: 400;
     text-align: center;
 }
+
 .stars-list {
     list-style: none;
     padding: 0;
     margin: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display: inline-block; /* Changed from flex */
 }
 
 .stars-list li {
@@ -128,8 +129,7 @@ h1 {
     height: 26px; 
 }
 
-
-.program-container{
+.program-container {
     text-align: center; 
     font-family: "Open Sans", sans-serif;
     font-size: 0.875rem;
@@ -137,103 +137,70 @@ h1 {
     line-height: 1.5;
     letter-spacing: 0.0175rem;
 }
+
 .program-container div {
     display: inline-block;
     text-align: center;
     width: 200px; 
-    vertical-align: top;
-    margin: 0 19px;
+    margin: 0 19px 100px; /* Зміна маргіну для нижнього відступу */
 }
 
 .program-container div img {
-   
     margin-top: 45px;
 }
 
 .program-container div p {
-    margin: 21px 44px;
+    margin: 15px 59px;
     padding: 10px 0;
     font-size: 0.875rem;
-    width: 110px;
+    width: 85px;
     font-weight: 700;
-    font-family: "Open Sans";
     line-height: 1.5; 
-    height: 38px; 
-    display: flex;
-    letter-spacing: 0.0175rem;
-    align-items: center;
-    justify-content: center;
-    color: var(--text, #828282);
-}
-.photoshop{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-}
-.illustrator{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-}
-.aftereffects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-}
-.figma {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
+    height: 37px; 
+    display: block; 
+    color: var(--gray-color);
 }
 
-.portfolio-conteiner h2{
+.portfolio-conteiner h2 {
     text-align: center;
     font-size: 2.125rem;
     font-weight: 700;
     margin-top: -45px;
     margin-bottom: 40px;
 }
-.portfolio-conteiner img{
+
+.portfolio-conteiner img {
     margin-bottom: 43px;
 }
+
 .fashion {
     text-decoration: none;
     text-decoration-line: underline;
 }
-.portfolio-conteiner p{
-text-align: center;
-text-decoration-line: underline;
-font-family: "Open Sans";
-font-size: 1.125rem;
-font-weight: 400;
-margin-bottom: 65px;
 
+.portfolio-conteiner p {
+    text-align: center;
+    text-decoration-line: underline;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 65px;
 }
 
 .contacts {
-    margin-top: 200px ;
+    margin-top: 200px;
     text-align: center;
     margin-bottom: 90px;
 }
 
-.contacts-group h2{
-margin-bottom: 20px;
-font-size: 2.125rem;
-font-weight: 700;
-font-family: "Open Sans";
-flex-shrink: 0;
-color: var(--Black, #070707);
+.contacts-group h2 {
+    margin-bottom: 20px;
+    font-size: 2.125rem;
+    font-weight: 700;
+    color: var(--text-color);
 }
 
-.btn{
+.btn {
     margin-top: 50px;
     display: inline-block;
     height: 44px;
@@ -246,26 +213,27 @@ color: var(--Black, #070707);
     border-radius: 22px;
     border: 2px solid #000;
     cursor: pointer;
-    font-family: 'Opean Sans', sans-serif;
     font-size: 1.125rem;
     letter-spacing: 0.1125rem;
-    margin-bottom: 3px;
 }
-.btn:hover{
-    color:#000;
-    background-color: #fff
+
+.btn:hover {
+    color: #000;
+    background-color: #fff;
 }
-.contacts ul{
+
+.contacts ul {
     padding: 0;
-    display: flex;
-    justify-content: center;
-   
+    text-align: center; /* Center align the list */
 }
+
 .contacts ul li {
     padding: 25px;
     margin-bottom: 37px;
+    display: inline-block; /* To maintain inline structure */
 }
-.contacts-text{
+
+.contacts-text {
     color: var(--gray-color);
     font-size: 0.875rem;
     font-weight: 400;
