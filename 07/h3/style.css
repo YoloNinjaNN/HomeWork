@@ -1,0 +1,118 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: #fff;
+    }
+
+    body {
+       
+        font-family: "Roboto", sans-serif;
+        background-color: #fff;
+       
+    }
+    .shopping-list {
+        background-color: #fff; /* Цвет фона списка */
+        padding: 40px;
+        width: min(100%, 800px);
+        margin-inline: auto;
+       
+      }
+    .color {
+    background-color: #3B3F45;
+    }
+
+    .container {
+        
+        margin-inline: auto;
+        padding: 20px; 
+        width: min(90%, 800px);/*//*/
+        
+    }
+
+    header {
+        background-color: #4A4F56;
+    }
+
+    hgroup h1 {
+        color: #FF8984;
+        text-align: center;
+    }
+
+    hgroup p {
+        color: #FF8984;
+        text-align: center;
+    }
+
+    .item {
+        align-items: center;
+        height: 5;
+    }
+    
+    label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        background: #88839E;
+        position: relative;
+        height: 45px;
+        
+      }
+    
+
+    input[type="checkbox"] {
+        margin-left: 12px;
+        margin-right: 16px;
+        background-color: #fff;
+        color: black;
+        /* Увеличиваем размер чекбокса */
+        width: 19px;
+        height: 19px;
+        
+    }
+    span{
+        flex-grow: 1; /* Занимает оставшееся пространство */
+        font-size: 1.125rem;
+    }
+    .small {
+        font-size: 0.8rem;
+      }
+         
+    
+
+      label:hover::before,
+      label:hover::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #fff;
+    }
+
+
+    label:hover::before {
+        top: 0;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        padding: 45px;
+        cursor: pointer;
+        border: none;
+        position: relative;
+    }
+    footer button{
+       
+        width: 534px;
+        height: 45px;
+        color: #FF8984;
+        background-color: #4A4F56;
+    }
+
+    label:hover::after {
+        bottom: 0;
+    }

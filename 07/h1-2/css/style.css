@@ -55,6 +55,7 @@ a {
 
 .navigation ul li a:hover {
     color: var(--text-color);
+    font-weight: bold;
 }
 .first_block{
     margin-top: 12px;
@@ -253,7 +254,9 @@ color: var(--Black, #070707);
 }
 .btn:hover{
     color:#000;
-    background-color: #fff
+    background-color: #fff;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 .contacts ul{
     padding: 0;
@@ -264,6 +267,9 @@ color: var(--Black, #070707);
 .contacts ul li {
     padding: 25px;
     margin-bottom: 37px;
+}
+.contacts ul li a:hover {
+    opacity: 0.5;
 }
 .contacts-text{
     color: var(--gray-color);
