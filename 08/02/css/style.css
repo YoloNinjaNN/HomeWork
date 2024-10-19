@@ -5,135 +5,123 @@
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #FFF;
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor : url('../fonts/cursor/cursor.png'), auto;
+    color: #fff;
 }
 
 .container {
-    width: min (90% 1440px);
     margin-inline: auto;
-    font-size: 16px;
-    font-weight: 400;
-    width: 100%;
+    width: min(90%, 1440px);
+    background-color: #39c;
     border: 25px solid #2B81AC;
-    background: #39C;
 }
-
-ul ol {
-    list-style: none;
-}
-
-.stroke {
-    display: inline-block;
-    font-size: 0;
-    margin-left: 107px;
-}
-
 h1 {
-    height: 25.282px;
-    flex-shrink: 0;
     font-size: 1.3125rem;
-    font-style: normal;
     font-weight: 400;
-    margin: 66px 0 40px;
-    margin-left: 107px;
-
+    margin: 46px 110px 60px;
 }
 
-h1 .wi {
-    font-size: 1.6875rem;
+ul {
+    width: 1170px;
+    background-color: white;
+    padding: 2px;
 }
 
 li {
+    margin-top: 2px;
+    margin-bottom:2px;
+    text-align: center;
     display: inline-block;
+    vertical-align: top;
+    height: 147px;
+    list-style-type: none;
+    transition: opacity 0.1s ease-in;
+}
+p {
+    margin-top: 26px;
     text-align: center;
     font-size: 1.375rem;
-    font-style: normal;
     font-weight: 400;
-    padding-top: 26px;
-    padding-bottom: 40px;
-    border: 2px solid;
 }
-
-span {
-    margin-right: 17px;
-    margin-bottom: 19px;
-}
-
-.wi {
-    vertical-align: middle;
+i {
+    margin-top: 5px;
+    padding-left: 10px;
     font-size: 2.625rem;
-    margin-top: 4px;
 }
-
-.width25px {
-    width: 25%;
+li:hover {
+    opacity: 0.9;
+    transition: all .1s ease-in;
 }
-
-.width50px {
-    width: 50%;
-}
-
-.width100px {
-    width: 100%;
-}
-
-#color1 {
-    background: #39C;
-}
-
-#color2 {
-    background: #3CC;
-}
-
-#color3 {
-    background: #969;
-}
-
-#color4 {
-    background: #C24747;
-}
-
-#color5 {
-    background: #E2674A;
-}
-
-#color6 {
-    background: #FC6;
-}
-
-#color7 {
-    background: #9C9;
-}
-
-#color8 {
-    background: #699;
-}
-
-#color9 {
-    background: #C69;
-}
-
-#color10 {
-    background: #396;
-}
-
-#color11 {
-    background: #669;
-}
-
-.stroke:hover li:not(:hover) {
+.opacity:hover li:not(:hover) {
     opacity: 0.6;
-    transition: all .2s ease;
 }
 
-footer p {
-    color: #FFF;
-    font-family: "Lucida Sans Unicode";
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 37px;
-    margin-bottom: 119px;
-    margin-left: 107px;
+.city-list {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.city50 {
+    width: calc(50% - 4px);
+}
+
+.city25{
+    width: calc(25% - 4px);
+}
+
+.city100{
+    width: calc(100% - 4px);
+}
+
+#lisbon {
+    background-color: #39C;
+}
+
+#paris {
+    background-color: #3CC;
+}
+
+#belgrade {
+    background-color: #969;
+}
+
+#venice {
+    background-color: #C24747;
+}
+
+#tel-aviv {
+    background-color: #E2674A;
+}
+
+#cairo {
+    background-color: #FC6;
+}
+
+#new-york {
+    background-color: #9C9;
+}
+
+#new-delhi {
+    background-color: #699;
+}
+
+#san-francisco {
+    background-color: #C69;
+}
+
+#tokyo {
+    background-color: #396;
+}
+
+#sydney {
+    background-color: #669;
+}
+
+
+footer {
+    margin: 37px 110px 97px;
+    
+    font-size: 1.2rem;
 }
