@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+    .form-row {
+        margin-bottom: 10px;
+    }
+    .form-row label {
+        display: inline-block;
+        width: 200px;
+    }
+    </style>
+</head>
+<body>
+    <a href="index.html">Перехід до швидкої реєстрації</a>
+<fieldset>
+<legend>Розширена реєстрація</legend>
+<form action="#" method="post" enctype="multipart/form-data" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+
+<div class="form-row">
+    <label for="name">Повне ім'я:</label>
+    <input type="text" name="name" id="name">
+</div>
+
+<div class="form-row">
+    <label for="birthDate">Дата народження:</label>
+    <input type="date" id="birthDate" name="birthDate">
+</div>
+<div class="form-row">
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX-XX-XX">
+</div>
+
+<div class="form-row">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+</div>
+
+<div class="form-row">
+    <label for="password">Пароль:</label>
+    <input type="password" name="password" id="password">
+</div>
+
+<div class="form-row">
+    <label for="confirm_password">Пароль ще раз:</label>
+    <input type="password" name="confirm_password" id="confirm_password" >
+</div>
+
+<div class="form-row">
+    <label for="favoriteColor">Улюблений колір:</label>
+    <input type="color" id="favoriteColor" name="favoriteColor">
+</div>
+
+<div class="form-row">
+    <label>Стать:</label>
+    <input type="radio" name="gender" value="male"> <label>Чоловіча</label>
+    <input type="radio" name="gender" value="female">
+    <label>Жіноча</label>
+</div>
+
+<div class="form-row">
+    <label for="age">Вік</label>
+    <input type="number" name="age" id="age">
+</div>
+
+<div class="form-row">
+    <label for="course">Курс:</label>
+    <select name="course" id="course">
+        <option value="frontend">Front-End</option>
+        <option value="backend">Back-End</option>
+        <option value="projectManagement">Project-Management</option>
+        <option value="qa">QA-Manual</option>
+    </select>
+</div>
+
+<div class="form-row">
+    <label for="address">Повна адреса:</label>
+    <textarea name="address" id="address"></textarea>
+</div>
+<div>
+    <label><input type="checkbox" name="agree" value="true"> Я погоджуюсь з обробкою персональних даних</label>
+</div>
+
+<div class="form-row"><button type="submit">Зареєструватись</button></div>
+</form>
+</fieldset>
+</body>
+</html>

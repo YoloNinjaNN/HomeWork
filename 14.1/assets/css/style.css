@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'PT-Sans';
+    font-style: normal;
+
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/*Header*/
+header .head{
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+div .img {
+    margin-left: auto;
+   
+}
+
+ .head nav ul {
+    margin-left: 50px;
+    display: flex;
+    font-family: 'Staatliches';
+    list-style-type: none;
+    gap: 10px;
+    color: #000;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.04125rem;
+}
+.head ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.text{
+    color: #000;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 600;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+
+}
+.text::before {
+    content: "";
+    display: inline-block;
+    width: 100px;  
+    height: 8px;  
+    background-color: black;
+    margin-right: 20px;
+}
+
+.galary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    padding: 20px 15px;
+    
+}
+
+
+.flip-card {
+    background-color: transparent;
+    height: 180px;
+    perspective: 1000px;
+   
+  
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-front {
+    display: grid;
+    place-items: center;
+    background-color: #E6E6E6;
+    color: black;
+    border-radius: 8px;
+  }
+  
+  .flip-card-back {
+    display: grid;
+    place-items: center;
+    background-color: #E6E6E6;
+    filter: invert(1);
+    transform: rotateY(180deg);
+    border-radius: 8px;
+  }
+

@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50px;
+}
+h2 {
+    color: blueviolet;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    margin-top: -5px;
+    margin-left: -10px;
+}
+
+
+.name {
+    font-size: 4rem;
+    text-align: center;
+    margin-right: -350px;
+    
+}
+
+.text {
+    margin-left: 450px;
+    text-align: justify;
+    justify-content: center;
+}
+
+.Information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -150px;
+}
+
+
+
+
+/* Медиа-запрос для небольших экранов */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .Information {
+        flex-direction: column;
+    }
+}
+
+

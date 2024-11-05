@@ -1,0 +1,39 @@
+.gray {
+    opacity: .3;
+}
+.container {
+    width: 100%;
+    max-width: 780px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.programs {
+    display: inline-block;
+
+    width: 23%;
+}
+.programs img {
+    width: 80px;
+    height: 80px;
+}
+.stars img {
+    width: 26px;
+    height: 26px;
+}
+.portfolio {
+    text-align: center;
+    font-size: 18px;
+}
+
+button {
+width: 180px;
+height: 44px;
+padding: 0px 16px;
+justify-content: center;
+align-items: center;
+border-radius: 22px;
+}
+footer {
+    text-align: center;
+}

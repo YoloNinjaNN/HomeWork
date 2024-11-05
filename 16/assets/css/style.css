@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+header {
+    display: flex;
+    margin-bottom: 100px;
+    border: 1px solid #E5EAF4;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+.service p {
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+}
+
+.service h1 {
+    margin-bottom: 40px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wrapper h2 {
+    margin-bottom: 15px;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33rem;
+}
+
+.wrapper p {
+    width: 250px;
+    margin-bottom: 28px;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #161330;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: #007FFC;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.wrapper .box {
+    gap: 30px;
+    padding: 40px;
+    width: 370px;
+    height: 340px;
+    border-radius: 8px;
+    border: 1px solid #E5EAF4;
+    background: #FFF;
+}
+.wrapper svg {
+    fill:#007FFC;
+}
+
+
+.wrapper .photo-box1,
+.photo-box2,
+.photo-box3 {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    border: 1px solid #E5EAF4;
+    padding: 14px 12px;
+    margin-bottom: 30px;
+}
+
+.photo-box3 {
+    padding: 14px 18.5px;
+}
+.box a svg {
+    fill: #007FFC;
+}
+.box:hover svg {
+   
+    fill: #52C29D;
+}
+.wrapper :hover {
+    border-color: #52C29D;
+}
+.wrapper a:hover {
+    color: #52C29D;
+    
+}
+.service {
+    margin-bottom: 100px;
+}
+
+footer {
+    padding: 40px 135px;
+    height: 193px;
+    background-color: #16133D;
+    
+}
+
+.img{
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    gap: 10px;
+    margin-top: 40px;
+    
+   
+}
+
+.img li {
+    list-style-type: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #EFEEF3;
+}
+
+.image li a svg{
+    fill :#16133D;
+}
+.image a:hover svg {
+    fill: #52C29D;
+}

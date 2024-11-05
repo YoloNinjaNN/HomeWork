@@ -1,0 +1,242 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+body {
+    padding: 121px 185px;
+}
+
+  .container {
+   position: relative;
+    width: min(90% 1070px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*header*/
+header {
+    margin-bottom: 45px;
+}
+
+.heading{
+    text-align: center;
+    width: 450px;
+    height: 157px;
+}
+.heading p{
+    margin-bottom: 10px;
+    color: #898F8F;
+    font-family: 'Raleway';
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 133.333% */
+    text-transform: uppercase;
+}
+.heading h1{
+    margin-bottom: 45px;
+    color:#FC0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), ;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: 'Roboto';
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 4.125rem; /* 110% */
+    text-transform: uppercase;
+}
+div .head-foot {
+    display: flex;
+    align-items: center;
+}
+div .line {
+    width: 210px;
+    height: 1px;
+    background: #FC0;
+}
+
+/*main*/
+
+.section-slider {
+    width: 1032px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.wrapper {
+    display: inline-block;
+    position: relative;
+   
+  }
+.inner {
+    border: 2px solid transparent;
+    position: relative;
+    padding: 9px;
+}
+
+.inner::before,
+.inner::after,
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70px;
+  background-color: gold;
+}
+.inner::before {
+    top: -10px;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  
+  .inner::after {
+    bottom: -30px;
+    right: 125px;
+    transform: rotate(90deg);
+  }
+  
+  .wrapper::before {
+    top: -10px;
+    right: 95px;
+    transform: rotate(0deg);
+  }
+  
+  .wrapper::after {
+    bottom: -30px;
+    left: 35px;
+    transform: rotate(90deg);
+  }
+
+
+
+
+
+div .photo {
+    flex-shrink: 0;
+    width: 495px;
+}
+
+
+div .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 515px;
+    height: 432px;
+    text-align: center;
+    color: #666;
+}
+div .member {
+    margin-bottom: 46px;
+}
+.member h2{
+   
+    font-family:'Roboto';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.member p {
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    text-transform: capitalize;
+}
+.section-slider .border {
+    background: #FC0;
+    width: 1px;
+    height: 560px;
+}
+.member-info ul{
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 45px;
+    gap: 10px;
+}
+.member-info ul li {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    border: 1px solid;
+    color: #898F8F;  
+}
+.member-info ul svg {
+    fill: #898F8F;
+}
+.member-info ul li:hover svg {
+    color: #FC0 ;
+    fill: #FC0;
+}
+.member-info li:hover {
+    color: #FC0;
+
+}
+
+div .foot-line {
+    width: 15%; /* Ширина элемента */
+    height: 4px; /* Высота элемента */
+    background: linear-gradient(
+        to right,
+        yellow 0%,
+        yellow 20%,
+        white 20%,
+        white 30%,
+        yellow 30%,
+        yellow 70%,
+        white 70%,
+        white 80%,
+        yellow 80%,
+        yellow 100%
+    );
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.foot p{
+    width: 430px;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-family: 'Roboto';
+
+}
+.foot .btn {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 0.875rem;
+    border: 1px solid #FC0;
+    cursor: pointer;
+    color:#666;
+}
+.foot .btn:hover {
+    background-color:#FC0;
+    border: 1px solid #898f8f;
+    
+}

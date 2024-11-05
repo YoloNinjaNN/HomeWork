@@ -1,0 +1,125 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: top;
+}
+ul{
+    list-style: none;
+}
+.hamburger{
+    display: none;
+    margin-left: 40px;
+}
+
+header {
+    padding: 37px 0;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    button{
+        display: inline-block;
+        height: 26px;
+        width: 26px;
+    }
+}
+.main-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+}
+.hero-section{
+    background: url('../image/bg-image.jpg') center center/cover no-repeat;
+    height: 600px;
+    padding-top: 100px;
+}
+.hero-section h1 {
+    width: 100%;
+    font-family: "Red Hat Display";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 4rem; /* 133.333% */
+    letter-spacing: 0.15rem;
+} 
+.blog {
+    padding: 90px 0;
+    
+}
+.blog-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    &.revers {
+        flex-direction: row-reverse;
+    }
+    .box-left {
+        width: 48%;
+    }
+    .box-right {
+        width: 48%;   
+    }
+    > div {
+        border: 2px solid #f00;
+    }
+}
+
+.latest-item{
+
+    .box-left {
+        width: 25%;
+    }
+    .box-center {
+        width: 25%;   
+    }
+    .box-right {
+        width: 25%;   
+    }
+    > div {
+        border: 2px solid #f00;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-menu ul {
+        display: none;
+    }
+    .hamburger{
+        display: inline-block;
+    }
+
+}
+@media screen and (max-width: 450px) {
+    header  {
+        height: 60px;
+    }
+    .blog-item,
+    .blog-item.revers {
+        flex-direction:column-reverse;
+        .box-left, .box-right {
+            width: 100%;
+            
+        }
+    }
+}

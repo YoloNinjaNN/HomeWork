@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'PT-Sans';
+    font-style: normal;
+
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/*Header*/
+header .head{
+   
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .head nav ul {
+    margin-left: 50px;
+    display: flex;
+    font-family: 'Staatliches';
+    list-style-type: none;
+    gap: 10px;
+    color: #000;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.04125rem;
+}
+.head ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+div .img {
+    margin-left: auto;
+   
+}
+
+.blockside {
+    position: sticky;
+    top: 0;
+}
+.sidebar {
+    width: 385px;
+    gap:30px;
+   
+}
+.sidebar h2 {
+    font-family: 'Francois-One';
+    font-size: 2.25rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: flex-start;
+    list-style-type: none;
+    border-bottom: 1px solid  #E6E6E6;
+ 
+    
+}
+.sidebar a {
+    color: #000;
+  text-decoration:none ;
+  
+}
+
+/*Main*/
+.textcolums {
+    background-image: url('../image/bg-picture.svg') ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 67% center;
+   
+    
+    
+    
+}
+
+main h2 {
+    font-family: 'Francois-One';
+    font-size: 2.25rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+
+.textcolums {
+    margin-top: -420px;
+    margin-left: auto;
+    width: 785px;
+   
+    }
+
+section {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+section h2 {
+    margin-bottom: 40px;
+}
+
+
+sup {
+    font-family: 'Farro';
+    font-weight: 300;
+    letter-spacing: 0.075rem;
+    font-size: 0.3em;
+    position: relative;
+    top: -0.4em;
+    
+}
+
+.section::before{
+    content: ""; 
+    position: absolute; 
+    top: -20px; 
+    width: 100px;
+    height: 8px; 
+    background-color: #000;
+}
+
+
+section p {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 40px;
+    font-family: 'PT-Sans';
+    font-style: normal;
+}
+
+.italic {
+    font-family: 'PT-Sans';
+    font-style: italic;
+}
+
+.bold {
+    font-family: 'PT-Sans';
+    font-style: normal;
+    font-weight: 700;
+}
+.text {
+    background-color:lightgrey;
+}
