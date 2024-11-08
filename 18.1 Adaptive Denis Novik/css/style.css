@@ -1,0 +1,402 @@
+:root {
+    --text-color: #070707;
+    --gray-color: #828282;
+    --bg-gray: #f6f6f6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    background: #FFF;
+
+}
+img {
+    vertical-align: top;
+}
+.container {
+    width: min(90%, 970px);
+    margin-inline: auto;
+}
+
+header .container {
+    border-bottom: 1px solid var(--gray-color);
+    padding: 24px 0 25px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.navigation ul {
+    text-align: center;
+    font-size: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin: 21px;
+    font-size: 1.125rem;
+}
+
+.navigation ul li a {
+    color: var(--gray-color);
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.navigation ul li a:hover {
+    color: var(--text-color);
+    font-weight: bold;
+}
+.first_block{
+    margin-top: 12px;
+}
+.photo {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 45px;
+
+}
+
+.about-me h2 {
+    font-size: 2.125rem;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.text{
+    text-align: center;
+
+}
+.text p{
+    margin-top: 43px;
+    font-size: 1.125rem;
+    height: 37px;
+}
+/* header*/
+.skills{
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 80px;
+}
+
+
+
+
+.program-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 97px;
+}
+.cont_1, .cont_2, .cont_3, .cont_4{
+    text-align: center;
+}
+.top img {
+    height: 80px;
+}
+.bottom {
+    margin-bottom: 100px;
+}
+
+
+.top {
+    margin-bottom: 25px;
+}
+ .text p {
+    margin-bottom: 60px;
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+   
+}
+.bottom ul {
+    display: flex;
+    gap: 10px;
+}
+
+.section-container {
+    margin-bottom: 200px;
+}
+
+.portfolio-conteiner img{
+    margin-bottom: 43px;
+}
+.portfolio-conteiner h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.portfolio-conteiner p{
+text-align: center;
+text-decoration-line: underline;
+font-family: "Open Sans";
+font-size: 1.125rem;
+font-weight: 400;
+margin-bottom: 70px;
+}
+.portfolio-conteiner p a{
+    color: black;
+    text-decoration: none;
+    text-decoration-line: underline;
+}
+.contacts {
+    margin-top: 200px ;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.contacts-group h2{
+margin-bottom: 20px;
+font-size: 2.125rem;
+font-weight: 700;
+font-family: "Open Sans";
+flex-shrink: 0;
+color: var(--Black, #070707);
+}
+
+.btn{
+    margin-top: 50px;
+    display: inline-block;
+    height: 44px;
+    line-height: 40px;
+    padding: 0 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 22px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-family: 'Opean Sans', sans-serif;
+    font-size: 1.125rem;
+    letter-spacing: 0.1125rem;
+    margin-bottom: 3px;
+}
+.btn:hover{
+    color:#000;
+    background-color: #fff;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.contacts ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+   
+}
+.contacts ul li {
+    padding: 25px;
+    margin-bottom: 37px;
+}
+.contacts ul li a:hover {
+    opacity: 0.5;
+}
+.contacts-text{
+    color: var(--gray-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .navigation ul li {
+        margin: 15px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .about-me h2 {
+        font-size: 1.875rem;
+        margin-top: 60px;
+    }
+
+    .text p {
+        font-size: 1rem;
+        margin-top: 30px;
+        height: auto;
+    }
+
+    .skills {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    
+    .program-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .cont_1, .cont_2, .cont_3, .cont_4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .cont_4 {
+        .text {
+            margin-bottom: 81px;
+        }
+    }
+
+    .bottom ul {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .portfolio-conteiner h2 {
+        font-size: 1.875rem;
+        margin-bottom: 30px;
+    }
+
+    .portfolio-conteiner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .portfolio-conteiner p {
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+
+    .contacts {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .contacts-group h2 {
+        font-size: 1.875rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0 12px;
+        height: 40px;
+        line-height: 36px;
+        margin-top: 40px;
+    }
+
+    .contacts ul li {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .contacts-text {
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-me h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+
+    .text p {
+        font-size: 0.875rem;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .skills {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .program-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .cont_1, .cont_2, .cont_3, .cont_4 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .top img {
+        height: 60px;
+    }
+
+    .bottom ul {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .portfolio-conteiner h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-conteiner p {
+        font-size: 0.875rem;
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .contacts-group h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0 10px;
+        height: 36px;
+        line-height: 32px;
+        margin-top: 30px;
+    }
+
+    .contacts ul li {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .contacts-text {
+        font-size: 0.75rem;
+    }
+}
