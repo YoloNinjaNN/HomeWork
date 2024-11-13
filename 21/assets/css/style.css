@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(90%, 2000px);
+    margin-inline:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+}
+.card img {
+    width: 130px;
+    height: 200px;
+    border-radius: 10px;
+}
+h1 , h2 {
+    color: black;
+   text-align: center;
+  
+}
+h2 {
+    margin-left: -140px;
+   }
+p {
+    display: flex;
+    align-items:end;
+    justify-content:end;
+    font-family: "Cattedrale-Demo";
+   
+}
+.card-inner{
+    width: 130px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.card:hover .card-inner {
+    transform: rotateY(180deg); 
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 130px;
+    height: 200px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.card {
+  
+    height: 200px;
+    perspective: 1000px;
+    margin-bottom: 10px;
+}.card-front {
+    background: #000;
+    transform: rotateY(180deg);
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.top, .center, .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hearts{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr)
+}
+.spades{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr)
+}
+.diamonds{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr)
+}
+.clubs{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr)
+}
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.top p, .bottom p {
+    margin: 0 10px;
+}

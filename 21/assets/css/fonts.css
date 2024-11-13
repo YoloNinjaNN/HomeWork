@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Cattedrale-Demo";
+  src: url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.eot");
+  src: url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/02165bebd0ea4d5af964ade304dc871c.svg#Cattedrale-Demo")format("svg");
+}
