@@ -337,8 +337,28 @@ color: var(--Black, #070707);
         
     }
     .navigation ul {
-        display: none;
+        display: none; /* Скрыть меню по умолчанию */
+        position: absolute;
+        right: 0;
+        top: 70px; /* Расположение меню от верхнего края */
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 120px;
+        padding: 10px 0;
+        text-align: right;
     }
+    .navigation ul li {
+        margin: 10px 20px;
+    }
+
+    .navigation.active ul {
+        display: block; /* Показать меню при активности */
+    }
+
+    .hamburger {
+        display:block;
+    }
+
 
     h1 {
         font-size: 2rem;
