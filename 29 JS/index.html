@@ -1,27 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Використання JS</title>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header>
-            <div class="container">
+    <script>
+        var greting = "Привіт, світ!";
+        let message = "Це змінна за допомогою let";
+        const constantMessage = "Це змінна за допомогою const";
+        console.log(greeting, message, constantMessage);
 
-            </div>
-        </header>
-        <main>
+        function greet(name) {
+            alert("Привіт, " + name + "!");
+        }
 
-        </main>
-        <footer>
-            <div class="container">
 
-            </div>
-        </footer>
-    </div>
+        let age = 18;
+        if (age >= 18) {
+            console.log("Ви досягли повноліття!");
+        } else {
+            console.log("Ви ще не досягли повноліття.");
+        }
+
+
+        for (let i = 1; i <= 5; i++) {
+            console.log("Це цикл: " + i);
+        }
+
+        let fruits = ["яблуко", "банан", "апельсин"];
+        console.log(fruits[1]);
+
+
+
+        let x = 5;
+        let y = 10;
+        if (x < y) {
+            console.log("x менше за y");
+        }
+
+
+
+        try {
+            let result = 10 / 0;
+            if (!isFinite(result)) {
+                throw "Ділення на нуль!";
+            }
+        } catch (error) {
+            console.error("Помилка:", error);
+        }
+    </script>
+    <script>
+    let firstName = "Іван";
+    let lastName = "Іванов";
+    let userFullName = "Іван Іванов"; 
+    let age = 25; 
+
+    // let 1name = "Неправильне"; 
+    // let my-name = "Неправильне"; 
+    // let let = "Неправильне"; 
+    // let user!Name = "Неправильне"; 
+    // let first name = "Неправильне"; 
+
+    </script>
+    <script >
+        // Це однорядковий коментар
+
+        /*
+        Це багаторядковий коментар.
+        Його можна використовувати для пояснень,
+        або для тимчасового вимкнення коду.
+        */
+
+        /**
+        * * Функція для обчислення суми двох чисел.
+        *  
+        * 
+        */
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
