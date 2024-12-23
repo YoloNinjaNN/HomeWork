@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sort arrays</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Array method sort</h1>
+      <ul id="results" class="list-group"></ul>
+    </div>
+
+    <script>
+      let arr; // NO DELETE
+      const colors = ["red", "Green", "blue", "yellow", "Brown", "tomato"]; // NO DELETE
+      const nums = [11, 2016, 1999999, 94]; // NO DELETE
+
+      /* ================ Sort arrays  =============================  */
+
+      /* 
+      function sortNums(a, b) {
+        return a - b;
+      }
+
+      nums.sort((a, b) => a - b);
+      console.log(nums);
+
+      function sortColors(st1, st2) {
+        return st1.toLowerCase().localeCompare(st2.toLowerCase());
+      }
+
+      colors.sort(sortColors);
+      console.log(colors); 
+      */
+
+      /*  Task -> З ресурсу  https://jsonplaceholder.typicode.com/users 
+отримати список користувачів та відсортувати їх на ім'я 
+*/
+      const results = document.getElementById("results");
+
+      function sortByName(st1, st2) {
+        return st1.name.toLowerCase().localeCompare(st2.name.toLowerCase());
+      }
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((r) => r.json())
+        .then(render);
+
+      function render(users) {
+        let out = "";
+        users.sort(sortByName);
+
+        for (let user of users) {
+          out += `<li class="list-group-item">${user.name}</li>`;
+        }
+        results.innerHTML = out;
+      }
+    </script>
+  </body>
+</html>
