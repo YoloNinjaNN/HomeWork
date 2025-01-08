@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Example</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button id="open">Відкрити</button>
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="modal">
+    <p>Це модальне вікно!</p>
+    <button id="close">Закрити</button>
+  </div>
+
+  <script>
+    const open = document.getElementById("open");
+    const close = document.getElementById("close");
+    const modal = document.getElementById("modal");
+    const overlay = document.getElementById("modal-overlay");
+
+    open.addEventListener("click", () => {
+      modal.style.display = "block";
+      overlay.style.display = "block";
+    });
+
+    close.addEventListener("click", () => {
+      modal.style.display = "none";
+      overlay.style.display = "none";
+    });
+
+    overlay.addEventListener("click", () => {
+      modal.style.display = "none";
+      overlay.style.display = "none";
+    });
+  </script>
+</body>
+</html>

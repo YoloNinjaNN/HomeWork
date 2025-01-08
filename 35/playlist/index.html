@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist</title>
+</head>
+<body>
+  <h1>Playlist</h1>
+  <ol id="playlist"></ol>
+
+  <script>
+    var playList = [
+      { author: "LED ZEPPELIN", song: "STAIRWAY TO HEAVEN" },
+      { author: "QUEEN", song: "BOHEMIAN RHAPSODY" },
+      { author: "LYNYRD SKYNYRD", song: "FREE BIRD" },
+      { author: "DEEP PURPLE", song: "SMOKE ON THE WATER" },
+      { author: "JIMI HENDRIX", song: "ALL ALONG THE WATCHTOWER" },
+      { author: "AC/DC", song: "BACK IN BLACK" },
+      { author: "QUEEN", song: "WE WILL ROCK YOU" },
+      { author: "METALLICA", song: "ENTER SANDMAN" }
+    ];
+
+    const list = document.getElementById("playlist");
+    playList.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.author} - ${item.song}`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="traffic-light" id="trafficLight">
+    <div class="light red"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+  </div>
+  <button id="changeLight">Перемкнути світло</button>
+
+  <script>
+    const lights = document.querySelectorAll(".light");
+    let currentIndex = 0;
+
+    document.getElementById("changeLight").addEventListener("click", () => {
+      lights.forEach(light => light.className = "light");
+      currentIndex = (currentIndex + 1) % lights.length;
+      if (currentIndex === 0) lights[currentIndex].classList.add("red");
+      if (currentIndex === 1) lights[currentIndex].classList.add("yellow");
+      if (currentIndex === 2) lights[currentIndex].classList.add("green");
+    });
+  </script>
+</body>
+</html>
