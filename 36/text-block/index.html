@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змінюваний блок</title>
+    <style>
+        #resizable {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #ccc;
+            position: relative;
+            resize: both;
+            overflow: auto;
+        }
+        #resizable:after {
+            content: '';
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            width: 10px;
+            height: 10px;
+            cursor: se-resize;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="resizable">
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ea distinctio consectetur necessitatibus expedita excepturi incidunt delectus inventore? Saepe quam ducimus repellat blanditiis quibusdam voluptate similique iste fugiat vero. Incidunt!
+    </div>
+</body>
+</html>

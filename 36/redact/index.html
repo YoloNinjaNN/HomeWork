@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування тексту</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-display">Це текст який можна редагувати.</div>
+    <textarea id="text-edit" style="display: none;"></textarea>
+
+    <script>
+        const textDisplay = document.getElementById('text-display');
+        const textEdit = document.getElementById('text-edit');
+
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.key === 'e') {
+                event.preventDefault();
+                textEdit.value = textDisplay.textContent;
+                textDisplay.style.display = 'none';
+                textEdit.style.display = 'block';
+                textEdit.focus();
+            } else if (event.ctrlKey && event.key === 's') {
+                event.preventDefault();
+                textDisplay.textContent = textEdit.value;
+                textDisplay.style.display = 'block';
+                textEdit.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

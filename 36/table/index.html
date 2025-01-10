@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сортування таблиці</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <table id="sortable-table">
+        <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Вік</th>
+                <th>Місто</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Олександр</td><td>25</td><td>Київ</td></tr>
+            <tr><td>Анна</td><td>22</td><td>Львів</td></tr>
+            <tr><td>Віктор</td><td>30</td><td>Одеса</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        const table = document.getElementById('sortable-table');
+        table.addEventListener('click', (event) => {
+            if (event.target.tagName === 'TH') {
+                const columnIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
+                const rows = Array.from(table.tBodies[0].rows);
+                const isNumeric = !isNaN(rows[0].cells[columnIndex].textContent);
+
+                rows.sort((a, b) => {
+                    const aText = a.cells[columnIndex].textContent.trim();
+                    const bText = b.cells[columnIndex].textContent.trim();
+                    return isNumeric ? aText - bText : aText.localeCompare(bText);
+                });
+
+                rows.forEach(row => table.tBodies[0].appendChild(row));
+            }
+        });
+    </script>
+</body>
+</html>
