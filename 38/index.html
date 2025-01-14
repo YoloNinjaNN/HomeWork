@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук фільмів</title>
+    <style>
+        #results, #details { margin-top: 20px; }
+        .movie-item { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Пошук фільмів</h1>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Назва фільму" required>
+        <select id="typeSelect">
+            <option value="">Всі</option>
+            <option value="movie">Фільм</option>
+            <option value="series">Серіал</option>
+            <option value="episode">Епізод</option>
+        </select>
+        <button type="submit">Пошук</button>
+    </form>
+
+    <div id="results"></div>
+    <div id="details"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
