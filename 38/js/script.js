@@ -6,7 +6,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 });
 
 function searchMovies(query, type, page) {
-    const apiKey = 'eaea62cf'; // Замініть на ваш API ключ
+    const apiKey = 'eaea62cf';
     const url = `http://www.omdbapi.com/?s=${encodeURIComponent(query)}&type=${type}&page=${page}&apikey=${apiKey}`;
 
     fetch(url)
@@ -42,7 +42,7 @@ function displayResults(movies, totalResults) {
 }
 
 function showDetails(imdbID) {
-    const apiKey = 'eaea62cf'; // Замініть на ваш API ключ
+    const apiKey = 'eaea62cf';
     const url = `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`;
 
     fetch(url)

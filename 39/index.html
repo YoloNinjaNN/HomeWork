@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоди</title>
+</head>
+<body>
+    <h1>Прогноз погоди</h1>
+    <div id="weather"></div>
+
+    <script>
+        const apiKey = 'Ваш API'; 
+        const city = 'Київ';
+        const weatherElement = document.getElementById('weather');
+        const storageKey = 'weatherData';
+        const cacheTime = 2 * 60 * 60 * 1000;
+
+        function getWeather() {
+            const now = new Date().getTime();
+            const storedData = localStorage.getItem(storageKey);
+
+            if (storedData) {
+                const { data, timestamp } = JSON.parse(storedData);
+                if (now - timestamp < cacheTime) {
+                    displayWeather(data);
+                    return;
+                }
+            }
+
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=uk`)
+                .then(response => response.json())
+                .then(data => {
+                    localStorage.setItem(storageKey, JSON.stringify({
+                        data: data,
+                        timestamp: now
+                    }));
+                    displayWeather(data);
+                })
+                .catch(error => {
+                    console.error('Помилка отримання даних:', error);
+                    weatherElement.innerHTML = '<p>Не вдалося отримати дані про погоду.</p>';
+                });
+        }
+
+        function displayWeather(data) {
+            if (data.cod !== 200) {
+                weatherElement.innerHTML = '<p>Помилка: ' + data.message + '</p>';
+                return;
+            }
+
+            const weather = data.weather[0];
+            const main = data.main;
+            const wind = data.wind;
+
+            const weatherHtml = `
+                <h2>${data.name}</h2>
+                <p>Температура: ${main.temp}°C</p>
+                <p>Відчувається як: ${main.feels_like}°C</p>
+                <p>Погода: ${weather.description}</p>
+                <p>Вологість: ${main.humidity}%</p>
+                <p>Вітер: ${wind.speed} м/с</p>
+            `;
+
+            weatherElement.innerHTML = weatherHtml;
+        }
+
+        getWeather();
+    </script>
+</body>
+</html>
