@@ -52,25 +52,25 @@ main .first-section {
     padding-bottom: 120px;
     
     .left-section {
-        position: relative; /* Родительский контейнер для позиционирования дочерних элементов */
+        position: relative;
         width: 845px;
         height: 527px;
 
         .background-image {
-            position: absolute; /* Абсолютное позиционирование внутри контейнера */
-            top: 0; /* Верхний край */
-            left: 0; /* Левый край */
-            z-index: 1; /* Фоновое изображение будет позади */
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            z-index: 1; 
            
         }
         
         .foreground-image {
-            position: absolute; /* Абсолютное позиционирование внутри контейнера */
-            top: 20%; /* Смещение сверху */
-            left: 20%; /* Смещение слева */
-            z-index: 2; /* Переднее изображение выше */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
-            border: 2px solid #FFF; /* Белая рамка вокруг изображения */
+            position: absolute;
+            top: 20%; 
+            left: 20%; 
+            z-index: 2; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #FFF; 
            
         }
     }
@@ -83,33 +83,33 @@ main .first-section {
 
 main .second-section {
     display: flex;
-    flex-direction: row-reverse; /* Переворачиваем направление секций */
+    flex-direction: row-reverse; 
     padding-bottom: 120px;
     
     .lft-section {
-        position: relative; /* Родительский контейнер для позиционирования дочерних элементов */
+        position: relative; 
         width: 845px;
         height: 527px;
 
         .bakground-image {
-            position: absolute; /* Абсолютное позиционирование внутри контейнера */
-            top: 0; /* Верхний край */
-            left: 20%; /* Левый край */
-            z-index: 1; /* Фоновое изображение будет позади */
+            position: absolute; 
+            top: 0; 
+            left: 20%; 
+            z-index: 1; 
         }
         
         .forground-image {
-            position: absolute; /* Абсолютное позиционирование внутри контейнера */
-            top: 20%; /* Смещение сверху */
-            left: 0; /* Смещение слева */
-            z-index: 2; /* Переднее изображение выше */
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
-            border: 2px solid #FFF; /* Белая рамка вокруг изображения */
+            position: absolute; 
+            top: 20%;
+            left: 0; 
+            z-index: 2; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+            border: 2px solid #FFF; 
         }
     }
 
     .rght-section {
-        margin-left: -70px; /* Сдвиг для корректировки расположения */
+        margin-left: -70px;
     }
 }
 
@@ -141,3 +141,6 @@ footer {
         color: white;
     }
 }
+
+
+
