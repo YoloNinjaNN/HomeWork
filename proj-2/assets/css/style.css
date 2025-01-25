@@ -1,0 +1,143 @@
+.container {
+    width: min(90%, 1600px);
+    margin: 0 auto; 
+}
+header {
+    height: 800px;
+    background-color: #7E5AFF;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 53px 215px 0;
+    nav ul{
+        display: flex;
+        gap: 70px;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+.center-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1{
+        width: 919px;
+        margin-top: 230px;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 8px;
+    }
+    p{
+        margin-top: -40px;
+        margin-bottom: 240px;
+    }
+}
+main p{
+    width: 470px;
+}
+main .first-section {
+    display: flex;
+    padding-bottom: 120px;
+    
+    .left-section {
+        position: relative; /* Родительский контейнер для позиционирования дочерних элементов */
+        width: 845px;
+        height: 527px;
+
+        .background-image {
+            position: absolute; /* Абсолютное позиционирование внутри контейнера */
+            top: 0; /* Верхний край */
+            left: 0; /* Левый край */
+            z-index: 1; /* Фоновое изображение будет позади */
+           
+        }
+        
+        .foreground-image {
+            position: absolute; /* Абсолютное позиционирование внутри контейнера */
+            top: 20%; /* Смещение сверху */
+            left: 20%; /* Смещение слева */
+            z-index: 2; /* Переднее изображение выше */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+            border: 2px solid #FFF; /* Белая рамка вокруг изображения */
+           
+        }
+    }
+    .right-section {
+        margin-right:-70px;
+    }
+}
+
+
+
+main .second-section {
+    display: flex;
+    flex-direction: row-reverse; /* Переворачиваем направление секций */
+    padding-bottom: 120px;
+    
+    .lft-section {
+        position: relative; /* Родительский контейнер для позиционирования дочерних элементов */
+        width: 845px;
+        height: 527px;
+
+        .bakground-image {
+            position: absolute; /* Абсолютное позиционирование внутри контейнера */
+            top: 0; /* Верхний край */
+            left: 20%; /* Левый край */
+            z-index: 1; /* Фоновое изображение будет позади */
+        }
+        
+        .forground-image {
+            position: absolute; /* Абсолютное позиционирование внутри контейнера */
+            top: 20%; /* Смещение сверху */
+            left: 0; /* Смещение слева */
+            z-index: 2; /* Переднее изображение выше */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+            border: 2px solid #FFF; /* Белая рамка вокруг изображения */
+        }
+    }
+
+    .rght-section {
+        margin-left: -70px; /* Сдвиг для корректировки расположения */
+    }
+}
+
+.central-section {
+    display: flex;
+    justify-content: center;
+}
+.NEWS {
+    height: 978px;
+    background: linear-gradient(237deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+}
+.GALLERY{
+    height: 978px;
+    text-align: center;
+}
+.CONTACT {
+    height: 700px;
+    text-align: center;
+}
+footer {
+    height: 549px;
+    background-color: #7E5AFF;
+    padding-left: 415px;
+    padding-top: 203px;
+    img {
+        margin-bottom: 41px;
+    }
+    p {
+        color: white;
+    }
+}
