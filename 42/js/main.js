@@ -1,4 +1,3 @@
-// 1) Клас, що описує коло
 class Circle {
     constructor(radius) {
         this._radius = radius;
@@ -35,7 +34,7 @@ console.log("Діаметр:", circle.diameter);
 console.log("Площа:", circle.getArea());
 console.log("Довжина кола:", circle.getCircumference());
 
-// 2) Клас, що описує маркер
+
 class Marker {
     constructor(color, inkLevel) {
         this.color = color;
@@ -64,7 +63,7 @@ marker.print("Hello, world!");
 marker.refill();
 marker.print("Refilled marker!");
 
-// 3) Клас Employee та EmpTable
+
 class Employee {
     constructor(name, position, salary) {
         this.name = name;
