@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Годинники світу</title>
+  <style>
+    .clock {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Годинники світу</h1>
+  <input type="text" id="timezone" placeholder="Часовий пояс (наприклад, 'Europe/Kyiv')">
+  <button onclick="addClock()">Додати годинник</button>
+  <div id="clocks"></div>
+
+  <script>
+    class WorldClock {
+      constructor(timezone) {
+        this.timezone = timezone;
+        this.clockElement = document.createElement("div");
+        this.clockElement.className = "clock";
+        this.clockElement.innerHTML = `
+          <p>Часовий пояс: ${timezone}</p>
+          <button onclick="this.parentElement.querySelector('.time').textContent = 'Час: ' + this.parentElement.clock.getCurrentDateTime()">Показати час</button>
+          <button onclick="this.parentElement.querySelector('.time').textContent = 'Дата та час: ' + this.parentElement.clock.getCurrentDateTime()">Показати дату та час</button>
+          <button onclick="this.parentElement.clock.deleteClock()">Видалити годинник</button>
+          <p class="time"></p>
+        `;
+        this.clockElement.clock = this;
+        document.getElementById("clocks").appendChild(this.clockElement);
+      }
+
+      getCurrentDate() {
+        return new Date().toLocaleDateString("uk-UA", { timeZone: this.timezone });
+      }
+
+      getCurrentDateTime() {
+        return new Date().toLocaleString("uk-UA", { timeZone: this.timezone });
+      }
+
+      deleteClock() {
+        this.clockElement.remove();
+      }
+    }
+
+    function addClock() {
+      const timezone = document.getElementById("timezone").value;
+      if (!timezone) {
+        alert("Введіть часовий пояс!");
+        return;
+      }
+      new WorldClock(timezone);
+    }
+  </script>
+</body>
+</html>
