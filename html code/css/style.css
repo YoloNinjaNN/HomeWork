@@ -1,0 +1,19 @@
+.container{
+    width: min(90%, 1400px);
+    margin: 0 auto;
+}
+header{
+    display: flex;
+
+}
+header nav ul li div{
+    background: #E7EFD6;
+    width: 46px;
+    height: 37px;
+
+}
+.color-logo{
+background: #F1F2AE;
+width: 181px;
+height: 37px;
+}
