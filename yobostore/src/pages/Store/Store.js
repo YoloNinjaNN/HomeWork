@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Store.css'; // Подключаем стили
+import './Store.css';
 
 // Импорт изображений
 import logo from '../../Components/assets/img/LOGO.png';
@@ -20,30 +20,196 @@ import Zowie from '../../Components/assets/img/zowie EC1-CW.jpg';
 import Pulsar_x2 from '../../Components/assets/img/PulsarX2V2RedEdition.webp';
 import Skyrox_v8 from '../../Components/assets/img/Scyrox-V8.webp';
 
+// Массив с данными о мышках
+export const miceData = [
+    {
+        id: 1,
+        name: "EndGame Gear OP1 8K",
+        price: "₴3,486.00",
+        image: OP1_8k,
+        description: "ORIGINAL ENDGAME SHAPE",
+        details: "EndGame Gear OP1 8K — это высокопроизводительная игровая мышь с уникальным дизайном и передовыми технологиями.",
+        specs: [
+            "Сенсор: PixArt PMW 3389",
+            "DPI: до 16000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 58 г"
+        ]
+    },
+    {
+        id: 2,
+        name: "Lamzu Maya",
+        price: "₴4,669.00",
+        image: Lamzu_Maya,
+        description: "ORIGINAL MAYA SHAPE",
+        details: "Lamzu Maya — это легкая и эргономичная мышь, созданная для профессиональных игроков.",
+        specs: [
+            "Сенсор: PixArt PMW 3370",
+            "DPI: до 19000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 55 г"
+        ]
+    },
+    {
+        id: 3,
+        name: "Lamzu Thorn",
+        price: "₴4,669.00",
+        image: Lamzu_Thorn,
+        description: "ORIGINAL THORN SHAPE",
+        details: "Lamzu Thorn — это мышь с уникальным дизайном, подходящая для различных игровых стилей.",
+        specs: [
+            "Сенсор: PixArt PMW 3370",
+            "DPI: до 19000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 57 г"
+        ]
+    },
+    {
+        id: 4,
+        name: "AIM 8K",
+        price: "₴3,106.35",
+        image: Aim_8K,
+        description: "Razer Viper V2 Pro (PPM EDITION)",
+        details: "AIM 8K — это мышь с высокой точностью и отзывчивостью, созданная для профессиональных игроков.",
+        specs: [
+            "Сенсор: PixArt PMW 3399",
+            "DPI: до 20000",
+            "Частота опроса: 8000 Гц",
+            "Количество кнопок: 8",
+            "Вес: 62 г"
+        ]
+    },
+    {
+        id: 5,
+        name: "Razer Deathadder V3 Pro",
+        price: "₴7,999.00",
+        image: Razer_Deathadder,
+        description: "ORIGINAL RAZER SHAPE",
+        details: "Razer Deathadder V3 Pro — это легкая и эргономичная мышь, разработанная для длительных игровых сессий.",
+        specs: [
+            "Сенсор: Focus Pro 30K",
+            "DPI: до 30000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 5",
+            "Вес: 63 г"
+        ]
+    },
+    {
+        id: 6,
+        name: "PATHFINDER",
+        price: "₴7,887.27",
+        image: Pathfinder,
+        description: "CUSTOM PATHFINDER SHAPE",
+        details: "PATHFINDER — это мышь с уникальным дизайном, подходящая для игроков, которые ценят комфорт и точность.",
+        specs: [
+            "Сенсор: PixArt PMW 3389",
+            "DPI: до 16000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 59 г"
+        ]
+    },
+    {
+        id: 7,
+        name: "BEAST X",
+        price: "₴6,051.00",
+        image: Beast_X,
+        description: "ORIGINAL BEAST_X SHAPE",
+        details: "BEAST X — это мышь с уникальным дизайном и высокой производительностью.",
+        specs: [
+            "Сенсор: PixArt PMW 3370",
+            "DPI: до 19000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 58 г"
+        ]
+    },
+    {
+        id: 8,
+        name: "Logitech G PRO X Superlight 2",
+        price: "₴6,299.00",
+        image: G_PRO,
+        description: "ORIGINAL LOGITECH SHAPE",
+        details: "Logitech G PRO X Superlight 2 — это легкая и высокопроизводительная мышь для профессиональных игроков.",
+        specs: [
+            "Сенсор: HERO 25K",
+            "DPI: до 25600",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 5",
+            "Вес: 63 г"
+        ]
+    },
+    {
+        id: 9,
+        name: "Mad R MAJOR+",
+        price: "₴2,799.00",
+        image: Mad_r,
+        description: "MAJOR+ SHAPE",
+        details: "Mad R MAJOR+ — это доступная и надежная мышь для игроков любого уровня.",
+        specs: [
+            "Сенсор: PixArt PMW 3325",
+            "DPI: до 10000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 85 г"
+        ]
+    },
+    {
+        id: 10,
+        name: "Zowie EC1-CW",
+        price: "₴4,669.00",
+        image: Zowie,
+        description: "ZOWIE PRO SHAPE",
+        details: "Zowie EC1-CW — это мышь с эргономичным дизайном, созданная для профессиональных игроков.",
+        specs: [
+            "Сенсор: PixArt PMW 3370",
+            "DPI: до 3200",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 5",
+            "Вес: 80 г"
+        ]
+    },
+    {
+        id: 11,
+        name: "Pulsar X2 V2 (Red Edition)",
+        price: "₴4,669.00",
+        image: Pulsar_x2,
+        description: "SPECIAL PULSAR SHAPE",
+        details: "Pulsar X2 V2 — это легкая и стильная мышь с высокой производительностью.",
+        specs: [
+            "Сенсор: PixArt PMW 3395",
+            "DPI: до 19000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 52 г"
+        ]
+    },
+    {
+        id: 12,
+        name: "Skyrox V8",
+        price: "₴4,669.00",
+        image: Skyrox_v8,
+        description: "ORIGINAL SKYROX SHAPE",
+        details: "Skyrox V8 — это мышь с уникальным дизайном и высокой точностью.",
+        specs: [
+            "Сенсор: PixArt PMW 3389",
+            "DPI: до 16000",
+            "Частота опроса: 1000 Гц",
+            "Количество кнопок: 6",
+            "Вес: 60 г"
+        ]
+    }
+];
+
 const Store = () => {
     const [isMenuActive, setIsMenuActive] = useState(false);
 
-    // Функция для переключения мобильного меню
     const toggleMenu = () => {
         setIsMenuActive(!isMenuActive);
     };
-
-    // Эффект для изменения фона
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const images = [
-        "url('../main-store/assets/img/first-img.jpg')",
-        "url('../main-store/assets/img/second-img.jpg')",
-        "url('../main-store/assets/img/third-img.jpg')",
-        "url('../main-store/assets/img/four-img.jpg')",
-    ];
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 10000);
-
-        return () => clearInterval(interval);
-    }, [images.length]);
 
     // Эффект для добавления класса при скролле
     useEffect(() => {
@@ -96,139 +262,20 @@ const Store = () => {
                 <section>
                     <div className="container">
                         <div className="grid-cont">
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={OP1_8k} alt="OP1" />
+                            {miceData.map((mouse) => (
+                                <div className="grid-item" key={mouse.id}>
+                                    <div className="image">
+                                        <img src={mouse.image} alt={mouse.name} />
+                                    </div>
+                                    <span className="product-cad_title">
+                                        <p>{mouse.description}</p>
+                                        <Link to={`/mouse/${mouse.id}`} className="bold">
+                                            {mouse.name}
+                                        </Link>
+                                    </span>
+                                    <p>{mouse.price}</p>
                                 </div>
-                                <span className="product-cad_title">
-                                    <p>ORIGINAL ENDGAME SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>EndGame Gear OP1 8K</Link>
-                                </span>
-                                <p>₴3,486.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Lamzu_Maya} alt="Lamzu Maya" />
-                                </div>
-                                <span className="product-cad_title">
-                                    <p>ORIGINAL MAYA SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Lamzu Maya</Link>
-                                </span>
-                                <p>₴4,669.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Lamzu_Thorn} alt="Lamzu Thorn" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ORIGINAL MAYA SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Lamzu Thorn</Link>
-                                </span>
-                                <p>₴4,669.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Aim_8K} alt="aim 8k" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>Razer Viper V2 Pro (PPM EDITION)</p>
-                                    <Link to="#" className="bold" data-istant>AIM 8K</Link>
-                                </span>
-                                <p>₴3,106.35</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Razer_Deathadder} alt="razer" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ORIGINAL RAZER SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Razer deathadder v3 pro</Link>
-                                </span>
-                                <p>₴7,999.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Pathfinder} alt="PATHFINDER" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>CUSTOM PATHFINDER SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>PATHFINDER</Link>
-                                </span>
-                                <p>₴7,887.27</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Beast_X} alt="BEAST X" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ORIGINAL BEAST_X SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>BEAST X</Link>
-                                </span>
-                                <p>₴6,051.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={G_PRO} alt="G_Pro" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ORIGINAL LOGITECH SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Logitech G PRO SUPERLIGHT 2</Link>
-                                </span>
-                                <p>₴6,299.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Mad_r} alt="mad r" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>MAJOR+ SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Mad R MAJOR+</Link>
-                                </span>
-                                <p>₴2,799.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Zowie} alt="zowie" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ZOWIE PRO SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Zowe EC1-CW</Link>
-                                </span>
-                                <p>₴4,669.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Pulsar_x2} alt="pulasr" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>SPECIAL PULSAR SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Pulsar X2 V2 (Red Edition)</Link>
-                                </span>
-                                <p>₴4,669.00</p>
-                            </div>
-
-                            <div className="grid-item">
-                                <div className="image">
-                                    <img src={Skyrox_v8} alt="skyrox" />
-                                </div>
-                                <span className="product-cad_title">
-                                <p>ORIGINAL SKYROX SHAPE</p>
-                                    <Link to="#" className="bold" data-istant>Skyrox V8</Link>
-                                </span>
-                                <p>₴4,669.00</p>
-                            </div>
-
+                            ))}
                         </div>
                     </div>
                 </section>

@@ -5,6 +5,7 @@ import Store from './pages/Store/Store'; // Импортируем страни�
 import AimGame from './pages/AimGame/AimGame'; // Импортируем страницу AimGame
 import Support from './pages/Support/Support'; // Импортируем страницу Support
 import Login from './pages/Login/Login'; // Импортируем страницу Login
+import MouseDetails from './pages/MouseDetails/MouseDetails';
 import './App.css'; // Импортируем глобальные стили
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
                 <Route path="/aim-game" element={<AimGame />} /> {/* Страница игры */}
                 <Route path="/support" element={<Support />} /> {/* Страница поддержки */}
                 <Route path="/login" element={<Login />} /> {/* Страница входа */}
+                <Route path="/mouse/:id" element={<MouseDetails />} />
+
             </Routes>
         </Router>
     );

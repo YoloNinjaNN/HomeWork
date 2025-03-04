@@ -1,0 +1,223 @@
+/* Основные стили для страницы MouseDetails */
+.mouse-details-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #212121;
+    color: white;
+}
+
+/* Основной контейнер с отступом сверху */
+.mouse-details-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 140px auto -70px; /* Отступ сверху 120px, снизу 20px */
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mouse-image img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.mouse-info {
+    margin-left: 40px;
+    flex: 1;
+}
+
+.mouse-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+}
+
+.rating span {
+    color: #666;
+    font-size: 1rem;
+}
+
+.price {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.payment-options strong {
+    color: #fff;
+}
+
+.social-share {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-share span {
+    margin-right: 10px;
+    color: #666;
+}
+
+.social-share button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #fff;
+}
+
+.help p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Второй контейнер с характеристиками */
+.mouse-specs-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mouse-specs-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Заголовок по центру */
+}
+
+.mouse-specs-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mouse-specs-container ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    white-space: nowrap; /* Текст в одну строку */
+}
+
+/*-----FOOTER------ */
+footer {
+    margin-top: auto;
+    background-color: #111211;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foot {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.foot img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.foot h2 {
+    color: white;
+}
+
+.foot nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.foot nav ul li img {
+    width: 40px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .mouse-specs-container ul li {
+        text-align: center; /* Текст по центру */
+        white-space: normal; /* Разрешаем перенос текста */
+    }
+    .mouse-details-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 170px auto ;
+    }
+
+    .mouse-image img {
+        max-width: 100%;
+    }
+
+    .mouse-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .color-option {
+        justify-content: center;
+    }
+
+    .social-share {
+        justify-content: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foot {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .foot img {
+        width: 100px;
+    }
+
+    /* Скрываем кнопку меню при скролле */
+    .mobile-menu-btn.hidden {
+        display: none;
+    }
+}
