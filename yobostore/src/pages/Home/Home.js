@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-// Импорт изображений
 import logo from '../../Components/assets/img/LOGO.png';
 import CatAvatar from '../../Components/assets/img/cat avatar.jpg';
 import fingertip from '../../Components/assets/img/fingertip_v2.avif';
@@ -69,7 +68,6 @@ const Home = () => {
                             <li><Link to="/">HOME</Link></li>
                             <li><Link to="/store">MICE</Link></li>
                             <li><Link to="/aim-game">AIM GAME</Link></li>
-                            <li><Link to="/support">SUPPORT</Link></li>
                         </ul>
                     </nav>
                     <button className="mobile-menu-btn" onClick={toggleMenu}>

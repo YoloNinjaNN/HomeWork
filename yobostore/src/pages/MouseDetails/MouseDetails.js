@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { miceData } from '../Store/Store'; // Импортируем miceData
-import './MouseDetails.css'; // Подключаем стили для MouseDetails
+import { miceData } from '../Store/Store';
+import './MouseDetails.css';
 
-// Импорт изображений для header и footer
 import logo from '../../Components/assets/img/LOGO.png';
 import catAvatar from '../../Components/assets/img/cat avatar.jpg';
 import TelegramIcon from '../../Components/assets/img/telegram.png';
 import GithubIcon from '../../Components/assets/img/github.png';
 
 const MouseDetails = () => {
-    const { id } = useParams(); // Получаем ID мышки из URL
-    const mouse = miceData.find((m) => m.id === parseInt(id)); // Находим мышку по ID
+    const { id } = useParams();
+    const mouse = miceData.find((m) => m.id === parseInt(id));
 
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -20,16 +19,16 @@ const MouseDetails = () => {
         setIsMenuActive(!isMenuActive);
     };
 
-    // Эффект для добавления класса при скролле
+
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 0) {
                 header.classList.add('scrolled');
-                setIsScrolled(true); // Устанавливаем состояние скролла
+                setIsScrolled(true);
             } else {
                 header.classList.remove('scrolled');
-                setIsScrolled(false); // Сбрасываем состояние скролла
+                setIsScrolled(false);
             }
         };
 
@@ -37,7 +36,6 @@ const MouseDetails = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Если мышка не найдена, показываем сообщение
     if (!mouse) {
         return <div>Мышь не найдена</div>;
     }
@@ -52,7 +50,6 @@ const MouseDetails = () => {
                             <li><Link to="/">HOME</Link></li>
                             <li><Link to="/store">MICE</Link></li>
                             <li><Link to="/aim-game">AIM GAME</Link></li>
-                            <li><Link to="/support">SUPPORT</Link></li>
                         </ul>
                     </nav>
                     <button 
@@ -97,7 +94,6 @@ const MouseDetails = () => {
                     </div>
                 </div>
 
-                {/* Второй контейнер с характеристиками */}
                 <div className="mouse-specs-container">
                     <h2>Характеристики</h2>
                     <ul>

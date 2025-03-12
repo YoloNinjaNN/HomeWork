@@ -1,0 +1,290 @@
+.aimGamePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #212121;
+  color: white;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+  color: white;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 1600px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header a img {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.nav ul li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav ul li a:hover {
+  color: #999;
+}
+
+.loginBtn {
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobileMenuBtn {
+  display: none;
+}
+
+
+.aimGame {
+  flex: 1;
+  padding: 20px;
+  margin-top: 80px; 
+}
+
+.timeSelector {
+  margin: 20px 0;
+}
+
+.timeSelector button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+.timeSelector button.active {
+  background-color: #0056b3;
+}
+
+.playerName input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.startButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.startButton:hover {
+  background-color: #0056b3;
+}
+
+.gameArea {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.aimGame {
+  flex: 1;
+  padding: 20px;
+  margin-top: 80px;
+  margin-inline: auto;
+  width: min(90%, 1600px);
+}
+.gameInfo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.targetsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.target {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.leaderboard {
+  margin-top: 20px;
+}
+
+.leaderboard ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.leaderboard li {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: white;
+}
+
+
+.footer {
+  background-color: #111211;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer .container {
+  height: 300px;
+  padding: 70px 0;
+  display: flex;
+  justify-content: baseline;
+}
+
+.foot {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.foot img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.foot h2 {
+  color: white;
+}
+
+.foot nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.foot nav ul li img {
+  width: 40px;
+}
+
+.gameOverMessage {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.gameOverMessage h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gameOverMessage p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header a img {
+      position: static;
+      transform: none;
+      margin-bottom: 10px;
+      width: 70px;
+  }
+
+  .nav ul {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+  }
+
+  .nav ul li a {
+      font-size: 1.2rem;
+  }
+
+  .footer .container {
+      height: auto;
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .foot {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .foot img {
+      width: 100px;
+  }
+
+  .mobileMenuBtn {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+}
